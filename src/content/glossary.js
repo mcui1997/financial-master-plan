@@ -1,0 +1,47 @@
+// Plain-word definitions. Chapters link terms with [[text]] or [[text|key]].
+
+export const GLOSSARY = {
+  '401k': { term: '401(k)', def: 'A retirement account through your employer. Money comes out of your paycheck before you see it. Similar plans are called 403(b), 457, or TSP.' },
+  apr: { term: 'APR', def: 'Annual percentage rate. The yearly interest rate on a debt. A card with 24% APR costs about $24 a year for every $100 you owe.' },
+  beneficiary: { term: 'Beneficiary', def: 'The person who gets an account if you die. Set on each account. It overrides your will.' },
+  bond: { term: 'Bond', def: 'A loan you make to a government or company. They pay you interest and return your money at a set date. Steadier than stocks.' },
+  'capital-gains': { term: 'Capital gain', def: 'The profit when you sell something for more than you paid. Taxed lower if you held it more than one year.' },
+  compounding: { term: 'Compounding', def: 'When your gains start earning gains of their own. It makes growth speed up over time.' },
+  dca: { term: 'Dollar cost averaging', def: 'Investing a set amount on a set schedule, no matter the price. You end up buying more shares when prices are low.' },
+  diversification: { term: 'Diversification', def: 'Spreading money across many investments that do not all move together, so one bad one cannot sink you.' },
+  dividend: { term: 'Dividend', def: 'A share of a company\'s profits paid to its owners, usually every quarter.' },
+  'employer-match': { term: 'Employer match', def: 'Money your employer adds to your 401(k) when you contribute. For example, 100% of what you put in, up to 4% of your pay. Free money.' },
+  etf: { term: 'ETF', def: 'Exchange-traded fund. A fund that holds many investments and trades like a stock. Many are low-cost index funds.' },
+  'expense-ratio': { term: 'Expense ratio', def: 'A fund\'s yearly fee, as a percent of your money. 0.05% means $5 a year per $10,000. Lower is better.' },
+  fdic: { term: 'FDIC insurance', def: 'US government protection for bank deposits, up to $250,000 per person, per bank, per account type. If the bank fails, you get your money back.' },
+  fiduciary: { term: 'Fiduciary', def: 'An advisor legally required to act in your best interest, not just sell you something "suitable."' },
+  'fi-number': { term: 'FI number', def: 'Financial independence number. Roughly 25 times the yearly spending you need from savings. The amount that could support you with the 4% rule.' },
+  'four-percent-rule': { term: '4% rule', def: 'A guideline: take 4% of your savings in year one of retirement, then the same amount each year, adjusted for inflation. Historically it lasted 30 years in most cases.' },
+  hdhp: { term: 'High-deductible health plan', def: 'A health plan with a higher deductible and usually lower premiums. Required to open an HSA.' },
+  hsa: { term: 'HSA', def: 'Health Savings Account. Tax-free in, tax-free growth, tax-free out for medical costs. Requires a high-deductible health plan.' },
+  hysa: { term: 'High-yield savings account', def: 'A savings account, often at an online bank, that pays much more interest than a typical one. Look for FDIC insurance.' },
+  'index-fund': { term: 'Index fund', def: 'A fund that simply owns everything in a market, like all US stocks, instead of trying to pick winners. Usually very low-cost.' },
+  inflation: { term: 'Inflation', def: 'Prices rising over time. Each dollar buys a little less each year.' },
+  'interest-rate': { term: 'Interest rate', def: 'The price of borrowing money, as a yearly percent. When rates rise, existing bonds lose value; new bonds pay more.' },
+  ira: { term: 'IRA', def: 'Individual Retirement Account. A retirement account you open yourself at a brokerage. Comes in Roth and traditional versions.' },
+  'marginal-tax-rate': { term: 'Marginal tax rate', def: 'The tax rate on your last dollar of income. Your top bracket.' },
+  'money-market-fund': { term: 'Money market fund', def: 'A fund that holds very short-term, safe loans. Acts like cash and pays interest. Not FDIC insured, but very low risk.' },
+  rebalancing: { term: 'Rebalancing', def: 'Bringing your mix back to its targets by trimming what grew and adding to what shrank.' },
+  reit: { term: 'REIT', def: 'Real estate investment trust. A company that owns buildings and pays most of its income to owners. A way to own real estate through a fund.' },
+  rmd: { term: 'RMD', def: 'Required minimum distribution. The amount you must take out of traditional retirement accounts each year starting at age 73 or 75.' },
+  roth: { term: 'Roth', def: 'An account type where you pay tax now, and growth plus withdrawals in retirement are tax-free.' },
+  'sequence-risk': { term: 'Sequence of returns risk', def: 'The danger of a crash early in retirement, when selling at low prices to pay bills does lasting damage.' },
+  stock: { term: 'Stock', def: 'A small piece of ownership in a company. Also called a share or equity.' },
+  't-bill': { term: 'T-bill', def: 'Treasury bill. A short-term loan to the US government, from 4 weeks to 1 year. Very safe. Free from state income tax.' },
+  'target-date-fund': { term: 'Target-date fund', def: 'A single fund that holds a stock and bond mix and gets safer as a chosen retirement year gets closer.' },
+  'taxable-account': { term: 'Taxable brokerage account', def: 'A regular investment account with no special tax breaks and no limits. You can withdraw any time.' },
+  'tax-loss-harvesting': { term: 'Tax-loss harvesting', def: 'Selling an investment at a loss to lower your taxes, then buying something similar to keep your mix.' },
+  ticker: { term: 'Ticker', def: 'The short code for a fund or stock, like VTI. You search it to buy.' },
+  traditional: { term: 'Traditional', def: 'An account type where you skip tax now, and pay tax when you take money out in retirement.' },
+  vesting: { term: 'Vesting', def: 'How long you must work somewhere before employer money, like a 401(k) match, is fully yours.' },
+  'wash-sale': { term: 'Wash sale', def: 'Selling at a loss and buying the same or nearly the same investment within 30 days before or after. The tax break is disallowed.' },
+}
+
+export function slug(s) {
+  return String(s).toLowerCase().replace(/\(k\)/g, 'k').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
